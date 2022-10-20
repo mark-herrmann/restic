@@ -11,7 +11,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/minio/sha256-simd"
+	"github.com/zeebo/blake3"
 	"github.com/restic/restic/internal/backend"
 	"github.com/restic/restic/internal/backend/s3"
 	"github.com/restic/restic/internal/cache"
@@ -531,7 +531,7 @@ func checkPack(ctx context.Context, r restic.Repository, id restic.ID, blobs []r
 	var hdrBuf []byte
 	hashingLoader := func(ctx context.Context, h restic.Handle, length int, offset int64, fn func(rd io.Reader) error) error {
 		return r.Backend().Load(ctx, h, int(size), 0, func(rd io.Reader) error {
-			hrd := hashing.NewReader(rd, sha256.New())
+			hrd := hashing.NewReader(rd, blake3.New())
 			bufRd.Reset(hrd)
 
 			// skip to start of first blob, offset == 0 for correct pack files

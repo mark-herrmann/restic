@@ -13,7 +13,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/minio/sha256-simd"
+	"github.com/zeebo/blake3"
 	"github.com/restic/restic/internal/errors"
 	"github.com/restic/restic/internal/restic"
 
@@ -485,7 +485,7 @@ func (s *Suite) TestSave(t *testing.T) {
 	for i := 0; i < saveTests; i++ {
 		length := rand.Intn(1<<23) + 200000
 		data := test.Random(23, length)
-		id = sha256.Sum256(data)
+		id = blake3.Sum256(data)
 
 		h := restic.Handle{
 			Type: restic.PackFile,
@@ -529,7 +529,7 @@ func (s *Suite) TestSave(t *testing.T) {
 
 	length := rand.Intn(1<<23) + 200000
 	data := test.Random(23, length)
-	id = sha256.Sum256(data)
+	id = blake3.Sum256(data)
 
 	if _, err = tmpfile.Write(data); err != nil {
 		t.Fatal(err)
