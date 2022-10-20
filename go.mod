@@ -25,13 +25,13 @@ require (
 	github.com/klauspost/compress v1.15.9
 	github.com/klauspost/cpuid/v2 v2.1.2 // indirect
 	github.com/kurin/blazer v0.5.4-0.20211030221322-ba894c124ac6
+	github.com/mark-herrmann/restic-FastCDC v0.0.0-20221011165112-2a4dbd36c50b // indirect
 	github.com/minio/minio-go/v7 v7.0.34
 	github.com/ncw/swift/v2 v2.0.1
 	github.com/pkg/errors v0.9.1
 	github.com/pkg/profile v1.6.0
 	github.com/pkg/sftp v1.13.5
 	github.com/pkg/xattr v0.4.8
-	github.com/restic/chunker v0.4.0
 	github.com/spf13/cobra v1.5.0
 	github.com/spf13/pflag v1.0.5
 	github.com/zeebo/blake3 v0.2.3 // indirect

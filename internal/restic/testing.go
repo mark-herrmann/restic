@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/restic/chunker"
+	"github.com/mark-herrmann/restic-FastCDC"
 	"golang.org/x/sync/errgroup"
 )
 

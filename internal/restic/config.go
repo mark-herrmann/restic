@@ -8,7 +8,7 @@ import (
 
 	"github.com/restic/restic/internal/debug"
 
-	"github.com/restic/chunker"
+	"github.com/mark-herrmann/restic-FastCDC"
 )
 
 // Config contains the configuration for a repository.

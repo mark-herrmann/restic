@@ -12,7 +12,7 @@ import (
 
 	"github.com/cenkalti/backoff/v4"
 	"github.com/klauspost/compress/zstd"
-	"github.com/restic/chunker"
+	"github.com/mark-herrmann/restic-FastCDC"
 	"github.com/restic/restic/internal/backend"
 	"github.com/restic/restic/internal/backend/dryrun"
 	"github.com/restic/restic/internal/cache"

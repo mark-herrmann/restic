@@ -4,7 +4,7 @@ import (
 	"context"
 	"strconv"
 
-	"github.com/restic/chunker"
+	"github.com/mark-herrmann/restic-FastCDC"
 	"github.com/restic/restic/internal/backend/location"
 	"github.com/restic/restic/internal/errors"
 	"github.com/restic/restic/internal/repository"
