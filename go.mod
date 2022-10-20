@@ -24,6 +24,7 @@ require (
 	github.com/juju/ratelimit v1.0.2
 	github.com/klauspost/compress v1.15.9
 	github.com/kurin/blazer v0.5.4-0.20211030221322-ba894c124ac6
+	github.com/mark-herrmann/restic-FastCDC v0.0.0-20221011165112-2a4dbd36c50b // indirect
 	github.com/minio/minio-go/v7 v7.0.34
 	github.com/minio/sha256-simd v1.0.0
 	github.com/ncw/swift/v2 v2.0.1
@@ -31,7 +32,6 @@ require (
 	github.com/pkg/profile v1.6.0
 	github.com/pkg/sftp v1.13.5
 	github.com/pkg/xattr v0.4.8
-	github.com/restic/chunker v0.4.0
 	github.com/spf13/cobra v1.5.0
 	github.com/spf13/pflag v1.0.5
 	golang.org/x/crypto v0.0.0-20220817201139-bc19a97f63c8

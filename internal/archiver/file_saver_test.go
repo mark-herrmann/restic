@@ -9,7 +9,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/restic/chunker"
+	"github.com/mark-herrmann/restic-FastCDC"
 	"github.com/restic/restic/internal/fs"
 	"github.com/restic/restic/internal/restic"
 	"github.com/restic/restic/internal/test"

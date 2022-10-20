@@ -9,7 +9,7 @@ import (
 	"github.com/restic/restic/internal/crypto"
 	rtest "github.com/restic/restic/internal/test"
 
-	"github.com/restic/chunker"
+	"github.com/mark-herrmann/restic-FastCDC"
 )
 
 const testLargeCrypto = false

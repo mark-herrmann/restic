@@ -12,7 +12,7 @@ import (
 	"github.com/restic/restic/internal/restic"
 	"github.com/restic/restic/internal/test"
 
-	"github.com/restic/chunker"
+	"github.com/mark-herrmann/restic-FastCDC"
 )
 
 // testKDFParams are the parameters for the KDF to be used during testing.
