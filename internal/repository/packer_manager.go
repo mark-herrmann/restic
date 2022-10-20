@@ -18,7 +18,7 @@ import (
 	"github.com/restic/restic/internal/fs"
 	"github.com/restic/restic/internal/pack"
 
-	"github.com/minio/sha256-simd"
+	"github.com/zeebo/blake3"
 )
 
 // Packer holds a pack.Packer together with a hash writer.
@@ -137,7 +137,7 @@ func (r *Repository) savePacker(ctx context.Context, t restic.BlobType, p *Packe
 		return err
 	}
 
-	// calculate sha256 hash in a second pass
+	// calculate blake3 hash in a second pass
 	var rd io.Reader
 	rd, err = restic.NewFileReader(p.tmpfile, nil)
 	if err != nil {
@@ -150,7 +150,7 @@ func (r *Repository) savePacker(ctx context.Context, t restic.BlobType, p *Packe
 		rd = beHr
 	}
 
-	hr := hashing.NewReader(rd, sha256.New())
+	hr := hashing.NewReader(rd, blake3.New())
 	_, err = io.Copy(ioutil.Discard, hr)
 	if err != nil {
 		return err

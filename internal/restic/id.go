@@ -8,16 +8,16 @@ import (
 
 	"github.com/restic/restic/internal/errors"
 
-	"github.com/minio/sha256-simd"
+	"github.com/zeebo/blake3"
 )
 
 // Hash returns the ID for data.
 func Hash(data []byte) ID {
-	return sha256.Sum256(data)
+	return blake3.Sum256(data)
 }
 
 // idSize contains the size of an ID, in bytes.
-const idSize = sha256.Size
+const idSize = 32
 
 // ID references content within a repository.
 type ID [idSize]byte

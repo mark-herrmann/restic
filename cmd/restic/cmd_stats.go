@@ -10,7 +10,7 @@ import (
 	"github.com/restic/restic/internal/restic"
 	"github.com/restic/restic/internal/walker"
 
-	"github.com/minio/sha256-simd"
+	"github.com/zeebo/blake3"
 	"github.com/spf13/cobra"
 )
 
@@ -254,7 +254,7 @@ func makeFileIDByContents(node *restic.Node) fileID {
 	for _, c := range node.Content {
 		bb = append(bb, []byte(c[:])...)
 	}
-	return sha256.Sum256(bb)
+	return blake3.Sum256(bb)
 }
 
 func verifyStatsInput(gopts GlobalOptions, args []string) error {
